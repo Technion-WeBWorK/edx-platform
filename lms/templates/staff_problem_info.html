@@ -25,7 +25,7 @@ ${block_content}
   <a class="instructor-info-action" href="#${element_id}_debug" id="${element_id}_trig">${_("Staff Debug Info")}</a>
 
   %  if settings.FEATURES.get('ENABLE_STUDENT_HISTORY_VIEW') and \
-    location.category == 'problem':
+    location.block_type in getattr(settings, 'HISTORY_SAVING_TYPES', {'problem'} ):
     <a class="instructor-info-action" href="#${element_id}_history" id="${element_id}_history_trig">${_("Submission history")}</a>
   %  endif
 </div>
