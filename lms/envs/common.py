@@ -3246,3 +3246,12 @@ ACE_CHANNEL_DEFAULT_EMAIL = 'django_email'
 ACE_CHANNEL_TRANSACTIONAL_EMAIL = 'django_email'
 ACE_CHANNEL_SAILTHRU_API_KEY = ""
 ACE_CHANNEL_SAILTHRU_API_SECRET = ""
+
+############### Setting HISTORY_SAVING_TYPES #################
+# This can be used to extend which modules/XBlocks can save to
+# the "problem" submission history (old: courseware.StudentModuleHistory
+# new: coursewarehistoryextended.StudentModuleHistoryExtended) and view
+# the stored data when ENABLE_STUDENT_HISTORY_VIEW is enabled.
+
+# The default is just 'problem' has access to these features.
+HISTORY_SAVING_TYPES = [ 'problem' ]
